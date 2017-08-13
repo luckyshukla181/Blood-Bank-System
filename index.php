@@ -4,6 +4,7 @@
 
 session_start ();
 // if user has come here after completing a shopping, clear session data
+// changes
 if (isset ( $_SESSION ['order_pending'] ) && $_SESSION ['order_pending'] == "false") {
 	unset ( $_SESSION ['order_pending'] );
 	unset ( $_SESSION ['products'] );
