@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `productOrder` (
 -- Table structure for table `shippingdetails`
 --
 
-CREATE TABLE IF NOT EXISTS `shippingdetails` (
+CREATE TABLE IF NOT EXISTS `shippingDetails` (
 `shipID` int(10) unsigned NOT NULL,
   `addrLine1` varchar(40) DEFAULT NULL,
   `addrLine2` varchar(40) DEFAULT NULL,
@@ -240,7 +240,7 @@ ALTER TABLE `productOrder`
 --
 -- Indexes for table `shippingdetails`
 --
-ALTER TABLE `shippingdetails`
+ALTER TABLE `shippingDetails`
  ADD PRIMARY KEY (`shipID`);
 
 --
@@ -282,7 +282,7 @@ MODIFY `orderID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `shippingdetails`
 --
-ALTER TABLE `shippingdetails`
+ALTER TABLE `shippingDetails`
 MODIFY `shipID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `status`
@@ -304,7 +304,7 @@ ADD CONSTRAINT `product_ibfk_2` FOREIGN KEY (`status`) REFERENCES `status` (`sta
 --
 ALTER TABLE `productOrder`
 ADD CONSTRAINT `productOrder_ibfk_1` FOREIGN KEY (`customerID`) REFERENCES `customer` (`custID`),
-ADD CONSTRAINT `productOrder_ibfk_2` FOREIGN KEY (`shipID`) REFERENCES `shippingdetails` (`shipID`),
+ADD CONSTRAINT `productOrder_ibfk_2` FOREIGN KEY (`shipID`) REFERENCES `shippingDetails` (`shipID`),
 ADD CONSTRAINT `productOrder_ibfk_3` FOREIGN KEY (`paymentID`) REFERENCES `payment` (`paymentID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
