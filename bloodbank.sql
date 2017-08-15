@@ -76,7 +76,7 @@ INSERT INTO `login_master` (`userID`, `passwd`, `type`, `enabled`) VALUES
 -- Table structure for table `orderdetails`
 --
 
-CREATE TABLE IF NOT EXISTS `orderdetails` (
+CREATE TABLE IF NOT EXISTS `orderDetails` (
 `ODID` int(10) unsigned NOT NULL,
   `orderID` int(10) unsigned DEFAULT NULL,
   `productID` int(10) unsigned DEFAULT NULL,
@@ -216,7 +216,7 @@ ALTER TABLE `login_master`
 --
 -- Indexes for table `orderdetails`
 --
-ALTER TABLE `orderdetails`
+ALTER TABLE `orderDetails`
  ADD PRIMARY KEY (`ODID`);
 
 --
@@ -262,7 +262,7 @@ ALTER TABLE `supplier`
 --
 -- AUTO_INCREMENT for table `orderdetails`
 --
-ALTER TABLE `orderdetails`
+ALTER TABLE `orderDetails`
 MODIFY `ODID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `payment`
