@@ -137,7 +137,7 @@ INSERT INTO `product` (`productID`, `name`, `code`, `unitPrice`, `description`,`
 -- Table structure for table `productorder`
 --
 
-CREATE TABLE IF NOT EXISTS `productorder` (
+CREATE TABLE IF NOT EXISTS `productOrder` (
 `orderID` int(10) unsigned NOT NULL,
   `orderDate` datetime DEFAULT NULL,
   `customerID` varchar(32) DEFAULT NULL,
@@ -234,7 +234,7 @@ ALTER TABLE `product`
 --
 -- Indexes for table `productorder`
 --
-ALTER TABLE `productorder`
+ALTER TABLE `productOrder`
  ADD PRIMARY KEY (`orderID`), ADD KEY `customerID` (`customerID`), ADD KEY `shipID` (`shipID`), ADD KEY `paymentID` (`paymentID`);
 
 --
@@ -277,7 +277,7 @@ MODIFY `productID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `productorder`
 --
-ALTER TABLE `productorder`
+ALTER TABLE `productOrder`
 MODIFY `orderID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `shippingdetails`
@@ -302,7 +302,7 @@ ADD CONSTRAINT `product_ibfk_2` FOREIGN KEY (`status`) REFERENCES `status` (`sta
 --
 -- Constraints for table `productorder`
 --
-ALTER TABLE `productorder`
+ALTER TABLE `productOrder`
 ADD CONSTRAINT `productOrder_ibfk_1` FOREIGN KEY (`customerID`) REFERENCES `customer` (`custID`),
 ADD CONSTRAINT `productOrder_ibfk_2` FOREIGN KEY (`shipID`) REFERENCES `shippingdetails` (`shipID`),
 ADD CONSTRAINT `productOrder_ibfk_3` FOREIGN KEY (`paymentID`) REFERENCES `payment` (`paymentID`);
