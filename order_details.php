@@ -72,7 +72,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 								echo '<tr>
 										<td>' . $name . '</td>
 										<td>' . $unitPrice . '</td>
-										<td>' . $qty . '&nbsp;&nbsp;Kg.</td>
+										<td>' . $qty . '&nbsp;&nbsp;unit</td>
 										<td>' . $subtotal . '</td>
 										</tr>';
 							}
