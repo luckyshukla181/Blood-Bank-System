@@ -88,7 +88,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 	$addr1 = clean ( $_POST ['address1'] );
 	$addr2 = clean ( $_POST ['address2'] );
 	$city = clean ( $_POST ['city'] );
-	$district = clean ( $_POST ['district'] );
+	//$district = clean ( $_POST ['district'] );
 	$state = clean ( $_POST ['state'] );
 	$pin = clean ( $_POST ['pin'] );
 	
